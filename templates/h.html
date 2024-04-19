@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	{% load static %}
+	<head>
+		<title>Hospital Details</title>
+		<meta name="author" content="Nile-Theme">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="recipes food, recipes , chinese food, italian food">
+		<meta name="description" content="Cook Note - Food & Recipes Food Template">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800%7CPoppins:100,200,300i,300,400,700,400i,500%7CDancing+Script:700" rel="stylesheet">
+		<!-- animate -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/animate.css' %}" />
+		<!-- owl Carousel assets -->
+		<link href="{% static 'findhospital/assets/css/owl.carousel.css' %}" rel="stylesheet">
+		<link href="{% static 'findhospital/assets/css/owl.theme.css' %}" rel="stylesheet">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/bootstrap.min.css' %}">
+		<!-- hover anmation -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/hover-min.css' %}">
+		<!-- flag icon -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/flag-icon.min.css' %}">
+		<!-- main style -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/style.css' %}">
+		<!-- colors -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/colors/main.css'%}">
+		<!-- elegant icon -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/elegant_icon.css'%}">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="{% static 'findhospital/assets/css/fontawesome-all.min.css' %}">
+	
+	</head>
+<body>
+
+
+	<div id="page-title" class="padding-tb-30px gradient-white">
+		<div class="container text-left">
+			<ol class="breadcrumb opacity-5">
+				<li><a href="#"></a></li>
+				<li class="active"></li>
+			</ol>
+			<h1 class="font-weight-300"></h1>
+		</div>
+	</div>
+
+
+	
+	<div class="container margin-bottom-50px">
+
+		<div class="recipes-masonry row">
+            {% for name in list_of %}
+			<div class="col-xl-5 col-lg-5 col-md-5 recipe-item margin-bottom-40px">
+				<div class="card border-2 box-shadow">
+				<div class="card-img-top"><a href="#">
+					<img class="img-rounded"  width="450" height="250", src="/{{name.Hospital_image}}"></a></div>
+					<div class="padding-lr-30px padding-tb-20px">
+						<h2 class="margin-bottom-20px margin-top-10px"><a class="text-dark" href="#">{{name.Hospital_name}}</a></h2><br>
+						<h5><b>Address:  </b> <a class="text-dark" href="#">{{name.Address}}</a><br></h5>
+						<h5><b>Helpline number:  </b><a class="text-dark" href="#">{{name.Helpline_number}}</a><br> </h5>
+						<h5><b>Hospital type:  </b><a class="text-dark" href="#">{{name.Hospital_type}}</a><br></h5>
+						<h5><b>Description:  </b><a class="text-dark" href="#">{{name.Description}}</a><br></h5>
+						
+						
+						</div>
+
+						</div>
+
+					</div>
+					{% endfor %}
+				</div>
+
+			</div>
+            
+
+		</div>
+
+	</div>
+
+	<script src="{% static 'findhospital/assets/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/sticky-sidebar.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/YouTubePopUp.jquery.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/imagesloaded.min.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/masonry.min.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/wow.min.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/custom.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/popper.min.js' %}"></script>
+	<script src="{% static 'findhospital/assets/js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
